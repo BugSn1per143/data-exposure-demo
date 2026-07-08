@@ -1,4 +1,4 @@
-# 🔍 Data Exposure Demo
+#  Data Exposure Demo
 
 > **A security & privacy awareness demonstration** — showing how much information a website can silently collect about you from a *single click* on a link.
 
@@ -6,43 +6,43 @@ When you open *any* link, the website on the other side can read a surprising am
 
 ---
 
-## ⚠️ Disclaimer (Read First)
+##  Disclaimer (Read First)
 
 This project is built **strictly for educational and awareness purposes**.
 
-- ✅ Use it on **your own devices**, or with people who have given you **clear permission** (demos, workshops, presentations).
-- ❌ Do **not** use it to trick, scare, or collect data from people without their consent.
+-  Use it on **your own devices**, or with people who have given you **clear permission** (demos, workshops, presentations).
+-  Do **not** use it to trick, scare, or collect data from people without their consent.
 - The data shown is the same data **every website you visit can already access** — that's the whole point of the demo.
 
 You are responsible for how you use this code.
 
 ---
 
-## 📸 What it captures
+##  What it captures
 
 The moment the page loads, it reads the following from the visitor's browser (no permission popup needed — browsers expose this by default):
 
 | Data | Source |
 |------|--------|
-| 🌐 Public IP address | `api.ipify.org` |
-| 💻 Operating system / platform | `navigator.platform` |
-| 🖥️ Screen resolution | `window.screen` |
-| 🎮 GPU model | WebGL renderer info |
-| 🔋 Battery level + charging status | Battery API |
-| ⚙️ CPU cores & RAM | `navigator.hardwareConcurrency` / `deviceMemory` |
-| 👆 Touchscreen support | `navigator.maxTouchPoints` |
+|  Public IP address | `api.ipify.org` |
+|  Operating system / platform | `navigator.platform` |
+|  Screen resolution | `window.screen` |
+|  GPU model | WebGL renderer info |
+|  Battery level + charging status | Battery API |
+|  CPU cores & RAM | `navigator.hardwareConcurrency` / `deviceMemory` |
+|  Touchscreen support | `navigator.maxTouchPoints` |
 
 And **only after the user interacts** (clicks), with explicit permission:
 
 | Data | Source |
 |------|--------|
-| 📍 GPS location (lat/long) | Geolocation API *(asks for permission)* |
+|  GPS location (lat/long) | Geolocation API *(asks for permission)* |
 
 All collected data is sent back to the Flask server and printed in the terminal.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Python + Flask** — backend server that serves the page and receives the data
 - **Vanilla JavaScript** — client-side data collection + "Matrix rain" / glitch UI
@@ -50,7 +50,7 @@ All collected data is sent back to the Flask server and printed in the terminal.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Install dependencies
 ```bash
@@ -77,7 +77,7 @@ ngrok gives you a public URL you can open on any device to test.
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 data-exposure-demo/
@@ -89,12 +89,12 @@ data-exposure-demo/
 
 ---
 
-## 💡 Why I built this
+##  Why I built this
 
 Most people click links without thinking about what the other side can see. This project makes the invisible *visible* — a hands-on way to teach friends, students, or clients about everyday digital privacy.
 
 ---
 
-## 📜 License
+##  License
 
 MIT — see [LICENSE](LICENSE).
